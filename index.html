@@ -9,7 +9,15 @@
 </head>
 
 <body>
-    <script src="scripts/script.js"></script>
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
     <div class="main-grid">
         <header>
             <img class="logo" src="img/TB.svg" alt="The Box">
@@ -19,6 +27,16 @@
                 <a href="#" class="nav__link">Blog</a>
                 <a href="#" class="nav__link">About</a>
             </nav>
+            <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="overlay-content">
+                    <a href="#" class="nav__link">Home</a>
+                    <a href="#" class="nav__link">Gallery</a>
+                    <a href="#" class="nav__link">Blog</a>
+                    <a href="#" class="nav__link">About</a>
+                </div>
+            </div>
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="burger">&#9776</span>
         </header>
 
         <main>
